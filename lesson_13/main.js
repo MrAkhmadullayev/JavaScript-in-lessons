@@ -45,20 +45,34 @@
 
 // console.log(toBinary(n))
 
-let s = 'salom'
-let ss = ''
+// let s = 'salom'
+// let ss = ''
 
-// for (let i = s.length - 1; i >= 0; i--) {
-// 	ss += s[i]
+// // for (let i = s.length - 1; i >= 0; i--) {
+// // 	ss += s[i]
+// // }
+
+// function reverseString(str) {
+// 	if (str !== '') {
+// 		ss += str[str.length - 1]
+// 		reverseString(str.slice(0, -1))
+// 	}
+// 	return ss
 // }
 
-function reverseString(str) {
-	if (str !== '') {
-		ss += str[str.length - 1]
-		reverseString(str.slice(0, -1))
+// reverseString(s)
+// console.log(ss)
+
+function fibo(n) {
+	if (n === 0) {
+		return 0
+	} else if (n === 1) {
+		return 1
+	} else {
+		return fibo(n - 1) + fibo(n - 2)
 	}
-	return ss
 }
 
-reverseString(s)
-console.log(ss)
+for (let i = 0; i <= 10; i++) {
+	console.log(fibo(i))
+}
