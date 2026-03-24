@@ -33,22 +33,22 @@
 
 // console.log(Number(ss))
 
-const readline = require('readline')
+// const readline = require('readline')
 
-const rl = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout,
-})
+// const rl = readline.createInterface({
+// 	input: process.stdin,
+// 	output: process.stdout,
+// })
 
-rl.question('Necha xonali sonlar kerak: ', input => {
-	const n = Number(input)
+// rl.question('Necha xonali sonlar kerak: ', input => {
+// 	const n = Number(input)
 
-	const start = 10 ** (n - 1)
-	const end = 10 ** n - 1
+// 	const start = 10 ** (n - 1)
+// 	const end = 10 ** n - 1
 
-	for (let i = start; i <= end; i++) {
-		console.log(i)
-	}
+// 	for (let i = start; i <= end; i++) {
+// 		console.log(i)
+// 	}
 
-	rl.close()
-})
+// 	rl.close()
+// })
