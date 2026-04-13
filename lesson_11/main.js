@@ -1,55 +1,74 @@
-// array
-
-// function toDecimal(a, b) {
-// 	let s = 0
-// 	let daraja = 0
-// 	while (a !== 0) {
-// 		let q = a % 10
-// 		s += q * Math.pow(b, daraja)
-// 		a = Math.floor(a / 10)
-// 		daraja++
-// 	}
-// 	return s
+// let in_name = document.getElementById("name");
+// let in_fam = document.getElementById("fam");
+//
+// function message_show(){
+//     alert(`Salom ${in_name.value} ${in_fam.value}`);
 // }
 
-// console.log(toDecimal(101, 2))
-
-// function toStep(x, y, z) {
-// 	let val = ''
-// 	while (x > 0 && y > 0) {
-// 		val = (x % y) + val
-// 		x = Math.floor(x / y)
-// 	}
-// 	let result = Number(val)
-// 	if (result === 0) return '0'
-
-// 	let son = ''
-// 	let digits = '0123456789ABCDEF'
-// 	while (result > 0 && z > 0) {
-// 		son = digits[result % z] + son
-// 		result = Math.floor(result / z)
-// 	}
-// 	return son
+// let a = document.getElementById("anumber");
+// let b = document.getElementById("bnumber");
+// let res = document.getElementById("result");
+// let s = a.value + b.value;
+//
+//
+// function calculate() {
+//     res.innerHTML = `(${a.value} + ${b.value}) = ${s.toString()}`;
+//     console.log(s);
 // }
 
-// console.log(toStep(24, 8, 10))
+// 1-vazifa
+// let a = document.getElementById("anumber");
+// let b = document.getElementById("bnumber");
+// let res = document.getElementById("result");
+//
+// function calculate(operator) {
+//     let num1 = Number(a.value);
+//     let num2 = Number(b.value);
+//     let result;
+//
+//     if (operator === "+") {
+//         result = num1 + num2;
+//     } else if (operator === "-") {
+//         result = num1 - num2;
+//     } else if (operator === "*") {
+//         result = num1 * num2;
+//     } else if (operator === "/") {
+//         result = num2 !== 0 ? num1 / num2 : "0 ga bo‘lish mumkin emas";
+//     }
+//
+//     res.innerHTML = `(${num1} ${operator} ${num2}) = ${result}`;
+// }
 
-// to'plam elementlari berilgan
-// let a = [12, 34, 56, 78, 90, -68]
-// let n = [3, 7, 11, 15, 9, 14]
-function newArray(a) {
-	let result = []
-	for (let i = 0; i < a.length; i++) {
-		let num = Math.abs(a[i])
-		let sum = 0
-		while (num > 0) {
-			sum += num % 10
-			num = Math.floor(num / 10)
-		}
-		result.push(sum)
-	}
-	return result
+// 2-vazifa
+let a = document.getElementById("anumber");
+let b = document.getElementById("bnumber");
+let op = document.getElementById("operator");
+let res = document.getElementById("result");
+
+function calculate() {
+    let num1 = Number(a.value);
+    let num2 = Number(b.value);
+    let operator = op.value;
+    let result;
+
+    if (operator !== "+" && operator !== "-" && operator !== "*" && operator !== "/") {
+        alert("Faqat +, -, *, / operatorlarini kiriting!");
+        return;
+    }
+
+    if (operator === "+") {
+        result = num1 + num2;
+    } else if (operator === "-") {
+        result = num1 - num2;
+    } else if (operator === "*") {
+        result = num1 * num2;
+    } else if (operator === "/") {
+        if (num2 === 0) {
+            alert("0 ga bo‘lish mumkin emas!");
+            return;
+        }
+        result = num1 / num2;
+    }
+
+    res.innerHTML = `(${num1} ${operator} ${num2}) = ${result}`;
 }
-
-let a = [12, 34, 56, 78, 90, -68]
-console.log(newArray(a))
